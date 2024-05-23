@@ -6,8 +6,6 @@ function f(x_in) result(f_out)
     f_out = x_in**2
 end function f
 
-
-
 program trapezium_rule
     use, intrinsic :: iso_fortran_env, only: dp=>real64
     implicit none
