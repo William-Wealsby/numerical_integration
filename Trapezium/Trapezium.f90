@@ -14,12 +14,12 @@ program trapezium_rule
     
     x_min = 0
     x_max = 1
-    segments =100
+    segments = 10
     delta = (x_max-x_min)/segments
   
     ! sum over all segments
     final_sum = f(x_min) + f(x_max)
-    do i = 1, segments, 1
+    do i = 1, segments-1, 1
         x = x_min+i*delta
         final_sum = final_sum+2*f(x) 
     end do
