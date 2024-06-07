@@ -35,8 +35,6 @@ double trapezium_mp (double start, double end, int segments, fx fun, int process
             exit(1);
         }
         if (pid==0){
-            printf("\n start %f:", start+i*delta);
-            printf("\n end %f:", start+(i+1)*delta);
             total = trapezium(start+i*delta, start+(i+1)*delta, segments, fun);
             printf("\n total = %f", total);
             exit(0);
