@@ -3,7 +3,6 @@
 #include<unistd.h>
 #include<sys/wait.h>
 #include<sys/types.h>
-#include<string.h>
 
 typedef double(*fx)(double); 
 
@@ -59,12 +58,8 @@ double trapezium_mp (double start, double end, int segments, fx fun, int process
 
 int main() {
     double total;
-    double total2;
-    total2 = trapezium_mp(0,1,100,*f,3);
-    total = trapezium(0,1,100,*f);
-    printf("trapezium: %f\n",total2);
-
-
+    total = trapezium_mp(0,1,100,*f,3);
+    printf("trapezium: %f\n",total);
     return 0;
 }
 
